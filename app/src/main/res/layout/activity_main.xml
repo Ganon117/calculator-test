@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="value"
+            type="com.example.sumatorianumeros.Values" />
+    </data>
+
+ <androidx.constraintlayout.widget.ConstraintLayout
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     tools:context=".MainActivity"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent">
+
+     <androidx.appcompat.widget.AppCompatEditText
+         android:id="@+id/suma1"
+         android:layout_width="150dp"
+         android:layout_height="50dp"
+         android:layout_marginStart="130dp"
+         android:layout_marginTop="155dp"
+         android:layout_marginEnd="131dp"
+         android:layout_marginBottom="30dp"
+         app:layout_constraintBottom_toTopOf="@+id/suma2"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+         android:inputType="number">
+
+     </androidx.appcompat.widget.AppCompatEditText>
+
+     <androidx.appcompat.widget.AppCompatEditText
+         android:id="@+id/suma2"
+         android:layout_width="150dp"
+         android:layout_height="50dp"
+         android:layout_marginStart="130dp"
+         android:layout_marginEnd="131dp"
+         android:layout_marginBottom="45dp"
+         app:layout_constraintBottom_toTopOf="@+id/appCompatButton"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         android:inputType="number">
+
+     </androidx.appcompat.widget.AppCompatEditText>
+
+     <androidx.appcompat.widget.AppCompatButton
+         android:id="@+id/appCompatButton"
+         android:layout_width="300dp"
+         android:layout_height="70dp"
+         android:layout_marginStart="55dp"
+         android:layout_marginEnd="56dp"
+         android:layout_marginBottom="331dp"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         android:text="@string/add">
+
+     </androidx.appcompat.widget.AppCompatButton>
+
+
+ </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+</layout>
+
+
+
+
