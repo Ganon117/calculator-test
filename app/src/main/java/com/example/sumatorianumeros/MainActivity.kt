@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        val suma = {x:Int,y:Int -> x + y}
+        val suma = {x:Int,y:Int -> x * y}
         binding.appCompatButton.setOnClickListener {
            println( suma(binding.suma1.text.toString().toInt(),binding.suma2.text.toString().toInt()))
             val intent = Intent(this@MainActivity,Main2::class.java)
