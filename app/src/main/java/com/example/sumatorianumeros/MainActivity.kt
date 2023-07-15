@@ -18,12 +18,12 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        val suma = {x:Int,y:Int -> x + y}
-        val resta = {x:Int,y:Int -> x - y}
-        val multiplicacion = {x:Int,y:Int -> x * y}
-        val Division = {x:Int,y:Int -> x / y}
+        val suma = {x:Int,y:Int -> x ^ y}
         binding.appCompatButton.setOnClickListener {
-           println( suma(binding.suma1.text.toString().toInt(),binding.suma2.text.toString().toInt()))
+            val potencia = {x:Int,y:Int -> x ** y}
+
+            Toast.makeText(this,"Potencia",Toast.LENGTH_LONG).show()
+            println( suma(binding.suma1.text.toString().toInt(),binding.suma2.text.toString().toInt()))
             val intent = Intent(this@MainActivity,Main2::class.java)
             intent.putExtra("result",suma(binding.suma1.text.toString().toInt(),binding.suma2.text.toString().toInt()))
             startActivity(intent)
