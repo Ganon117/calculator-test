@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
 
 
         val suma = {x:Int,y:Int -> x + y}
+        val resta = {x:Int,y:Int -> x - y}
         binding.appCompatButton.setOnClickListener {
             val resta = {x:Int,y:Int -> x - y}
             Toast.makeText(this,"Resta",Toast.LENGTH_LONG).show()
