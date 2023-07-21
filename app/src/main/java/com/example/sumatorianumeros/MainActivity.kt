@@ -20,6 +20,8 @@ class MainActivity : AppCompatActivity() {
 
         val suma = {x:Int,y:Int -> x + y}
         binding.appCompatButton.setOnClickListener {
+            val resta = {x:Int,y:Int -> x - y}
+            Toast.makeText(this,"Resta",Toast.LENGTH_LONG).show()
            println( suma(binding.suma1.text.toString().toInt(),binding.suma2.text.toString().toInt()))
 
             val multiplicacion = {x:Int,y:Int -> x * y}
