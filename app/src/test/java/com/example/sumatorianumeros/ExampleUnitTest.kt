@@ -14,4 +14,9 @@ class ExampleUnitTest {
     fun addition_isCorrect() {
         assertEquals(4, 2 + 2)
     }
+    @Test
+    fun resta(){
+        val resta = {x:Int,y:Int -> x - y}
+        assertEquals(0, resta(2,2))
+    }
 }

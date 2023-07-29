@@ -3,6 +3,7 @@ package com.example.sumatorianumeros
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.text.set
 import androidx.databinding.DataBindingUtil
@@ -20,17 +21,19 @@ class MainActivity : AppCompatActivity() {
 
         val suma = {x:Int,y:Int -> x + y}
         val resta = {x:Int,y:Int -> x - y}
+        val multiplicacion = {x:Int,y:Int -> x * y}
+        val division = {x:Int,y:Int -> x / y}
         binding.appCompatButton.setOnClickListener {
-            val resta = {x:Int,y:Int -> x - y}
-            Toast.makeText(this,"Resta",Toast.LENGTH_LONG).show()
-           println( suma(binding.suma1.text.toString().toInt(),binding.suma2.text.toString().toInt()))
 
-            val multiplicacion = {x:Int,y:Int -> x * y}
+            Toast.makeText(this,"Resta",Toast.LENGTH_LONG).show()
+           println( multiplicacion(binding.numero1.text.toString().toInt(),binding.numero2.text.toString().toInt()))
+
+
 
             Toast.makeText(this,"multiplicacion",Toast.LENGTH_LONG).show()
 
             val intent = Intent(this@MainActivity,Main2::class.java)
-            intent.putExtra("result",suma(binding.suma1.text.toString().toInt(),binding.suma2.text.toString().toInt()))
+            intent.putExtra("result",multiplicacion(binding.numero1.text.toString().toInt(),binding.numero2.text.toString().toInt()))
             startActivity(intent)
         }
     }
