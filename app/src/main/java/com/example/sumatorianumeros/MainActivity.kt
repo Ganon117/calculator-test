@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         val resta = {x:Int,y:Int -> x - y}
         val multiplicacion = {x:Int,y:Int -> x * y}
         val division = {x:Int,y:Int -> x / y}
-        val cubo = {x:Int,y:Int -> x * x}
+        val cubo = {x:Int,y:Int -> x * x * x}
         binding.appCompatButton.setOnClickListener {
 
             Toast.makeText(this,"Resta",Toast.LENGTH_LONG).show()
