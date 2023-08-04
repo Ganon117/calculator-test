@@ -23,17 +23,18 @@ class MainActivity : AppCompatActivity() {
         val resta = {x:Int,y:Int -> x - y}
         val multiplicacion = {x:Int,y:Int -> x * y}
         val division = {x:Int,y:Int -> x / y}
+        val cubo = {x:Int,y:Int -> x * x}
         binding.appCompatButton.setOnClickListener {
 
             Toast.makeText(this,"Resta",Toast.LENGTH_LONG).show()
-           println( multiplicacion(binding.numero1.text.toString().toInt(),binding.numero2.text.toString().toInt()))
-
+           println( cubo(binding.numero1.text.toString().toInt(),binding.numero2.text.toString().toInt()))
 
 
             Toast.makeText(this,"multiplicacion",Toast.LENGTH_LONG).show()
 
+            Toast.makeText(this,"Cubo",Toast.LENGTH_LONG).show()
             val intent = Intent(this@MainActivity,Main2::class.java)
-            intent.putExtra("result",multiplicacion(binding.numero1.text.toString().toInt(),binding.numero2.text.toString().toInt()))
+            intent.putExtra("result",cubo(binding.numero1.text.toString().toInt(),binding.numero2.text.toString().toInt()))
             startActivity(intent)
         }
     }

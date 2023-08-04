@@ -19,4 +19,10 @@ class ExampleUnitTest {
         val resta = {x:Int,y:Int -> x - y}
         assertEquals(0, resta(2,2))
     }
+
+    @Test
+    fun cubo(){
+        val cubo= {x:Int -> x * x}
+        assertEquals(9, resta(3))
+    }
 }
