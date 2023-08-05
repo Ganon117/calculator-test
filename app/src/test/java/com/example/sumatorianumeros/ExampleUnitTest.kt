@@ -23,6 +23,6 @@ class ExampleUnitTest {
     @Test
     fun cubo(){
         val cubo= {x:Int -> x * x * x}
-        assertEquals(9, cubo(3))
+        assertEquals(27, cubo(3))
     }
 }
